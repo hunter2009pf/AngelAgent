@@ -1,9 +1,12 @@
 # AngelAgent
 AI agent for the new era! Retrieval and generation are different!!
 
-## Plan:
+## Plan
 1. 使用Transformer实现基于文本的任务分类；
 2. 长文本切片为短文本，每个短文本对应一个原子任务，多个原子任务串起来形成一个任务链。
+
+## References
+https://huggingface.co/docs/transformers/en/tasks/sequence_classification
 
 ## Q&A
 Question:
