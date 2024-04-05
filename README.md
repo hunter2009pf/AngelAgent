@@ -13,9 +13,11 @@ AI agent for the new era! Retrieval and generation are different!!
 5. 如第4步不吻合，则进入重新规划环节（反思），基于分类信息和上一次失败的经验，重新规划；
 6. 如第5步循环多次依然无法给出合理任务链，达到重试上限，记录到日志，返回不可实现；
 7. 如生成合理任务链，则按序执行，返回处理结果。
+8. (建议)可以尝试用图规划和强化学习以及Transformer来解决问题。
 
 ## References
 https://huggingface.co/docs/transformers/en/tasks/sequence_classification
+https://arxiv.org/pdf/2106.01345.pdf
 
 ## Q&A
 Question:
