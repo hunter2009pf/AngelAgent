@@ -5,6 +5,15 @@ AI agent for the new era! Retrieval and generation are different!!
 1. 使用Transformer实现基于文本的任务分类；
 2. 长文本切片为短文本，每个短文本对应一个原子任务，多个原子任务串起来形成一个任务链。
 
+## Detail
+1. 分类任务和任务链规划；
+2. 分类任务决定可能动用哪些原子能力；
+3. 任务链规划模型决定将哪些原子能力组合起来，并以什么顺序组合；
+4. 需检验每个任务的输出和下一个任务的输入是否吻合，即入参检验，包括类型是否匹配以及值的范围合法性；
+5. 如第4步不吻合，则进入重新规划环节（反思），基于分类信息和上一次失败的经验，重新规划；
+6. 如第5步循环多次依然无法给出合理任务链，达到重试上限，记录到日志，返回不可实现；
+7. 如生成合理任务链，则按序执行，返回处理结果。
+
 ## References
 https://huggingface.co/docs/transformers/en/tasks/sequence_classification
 
